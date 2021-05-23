@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="afterBody">
+      <!-- navbar -->
+      <div id="navbar">
+        <h2 class="heading">To-Do list for <span id="dateToday"></span></h2>
+      </div>
+
+      <!-- main body -->
+      <div id="main-container">
+        <!-- Urgent -->
+        <div id="urgent--div">
+          <div id="urgentHead" class="headContainer">
+            <h2 class="sidebarHead">URGENT</h2>
+          </div>
+
+          <div class="urgentDynamicDiv">
+            <!-- Urgent dynamic code here -->
+          </div>
+        </div>
+
+        <!-- tasks and form -->
+        <div id="tasks--div">
+          <!-- Div-1 -->
+          <div class="inTasks">
+            <form>
+              <div class="inFormDivs">
+                <input
+                  type="text"
+                  placeholder="Add task to list.."
+                  id="addTaskInput"
+                />
+                <div id="addTaskToList" class="btn">ADD</div>
+              </div>
+
+              <div class="inFormDivs">
+                <div>
+                  <input
+                    type="radio"
+                    id="radioDally"
+                    name="typeDiv"
+                    value="0"
+                    checked
+                  />
+                  <label for="radioDally">Dally</label>
+                </div>
+
+                <div>
+                  <input
+                    type="radio"
+                    id="radioUrgent"
+                    name="typeDiv"
+                    value="1"
+                  />
+                  <label for="radioUrgent">Urgent</label><br />
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Div-2 -->
+          <div id="allTaskDiv" class="inTasks">
+            <h3 id="taskListHeader">TASK LIST</h3>
+
+            <!-- Code entered by JS dynamically -->
+            <div class="dynamicCode">
+              <!-- All tasks entered dynamically -->
+            </div>
+          </div>
+          <!-- Div-3 Made with JS -->
+          <div class="div3">
+            <div class="btn cb-btn hidden">Completed task</div>
+            <div class="modal hidden">
+              <div class="close-modal">&times;</div>
+              <h1 class="centerClass">List of tasks you have completed</h1>
+              <div class="ctask-container">
+                <!-- Dynamically Entered code -->
+                <!-- <div class="cTask">
+                  <h2>I am a TASK that you completed</h2>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Dally -->
+        <div id="dally--div">
+          <div id="dHead" class="headContainer">
+            <h2 class="sidebarHead">DALLY</h2>
+          </div>
+          <div class="dDynamicDiv">
+            <!-- dally dynamic code here -->
+          </div>
+        </div>
+      </div>
+      
+      <div class="overlay hidden"></div>
+      <!-- footer -->
+      <div id="footer">
+        <h2 class="heading">Made by Thunder</h2>
+      </div>
+    </div>
+  </body>
+  <script src="./prescript.js"></script>
+  <script src="./script.js"></script>
+</html>

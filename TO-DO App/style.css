@@ -1,0 +1,319 @@
+/* FONT IMPORT */
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+/* Scrollbar code */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e9e9e6;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e9e9e6a9;
+}
+
+/* CSS RESET */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+  color: #000;
+  letter-spacing: 4px;
+}
+
+/* MAIN CSS */
+/* Nav and footer */
+#navbar,
+#footer {
+  padding: 5px 0px;
+  width: 100vw;
+  background-color: #044F67;
+}
+
+.heading,
+#dateToday {
+  color: #f2f1ef;
+  width: fit-content;
+  margin: auto;
+  padding-top: 5px;
+}
+
+/* Just next to body container */
+#afterBody {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: linear-gradient(to top right, #00eeff3a, #ffffff41),
+    url("https://source.unsplash.com/1600x900/?coffee,tea");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* ============= Main content ============= */
+#main-container {
+  height: calc(100vh - 100px);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ============= Sidebar ============= */
+#urgent--div {
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+#dally--div {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+#urgent--div,
+#dally--div {
+  width: 25%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  background-color: #0000009c;
+}
+
+.headContainer {
+  max-width: 280px;
+  margin: auto;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.sidebarHead {
+  padding: 1% 5%;
+  width: fit-content;
+  margin: auto;
+  color: white;
+}
+
+#dHead {
+  background-color: #1b98f5;
+}
+#urgentHead {
+  background-color: #f27268;
+}
+
+/* ============= tasks--div ============= */
+
+#tasks--div {
+  width: 48%;
+  height: 98.686%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 16px;
+  background-color: #ecf0f16e;
+}
+
+.inTasks {
+  width: 100%;
+  margin: 10px;
+}
+
+.inFormDivs {
+  width: 90%;
+  margin: auto;
+  padding: 5px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.btn {
+  font-weight: bold;
+  color: #ebe7e7;
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 8px 8px;
+  background-color: #757d75;
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #000000;
+  background-color: #757d75;
+  transition: 250ms;
+  border-radius: 10px;
+}
+
+#addTaskInput {
+  width: 80%;
+  height: 35px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  padding: 0 20px 0 20px;
+}
+
+#allTaskDiv {
+  height: 90%;
+  overflow: hidden;
+}
+
+#taskListHeader {
+  width: fit-content;
+  margin: auto;
+  padding: 5px;
+  letter-spacing: 3px;
+  word-spacing: 6px;
+}
+
+.dynamicCode,
+.urgentDynamicDiv,
+.dDynamicDiv {
+  padding: 4px;
+  height: 90%;
+  overflow-y: auto;
+}
+
+/* ======================================================= */
+.div3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.centerClass {
+  margin: auto;
+  width: fit-content;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 85%;
+  background-color: #ffffff;
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgb(0 0 0 / 30%);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0rem;
+  right: 1rem;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.cTask {
+  background-color: #f8ad58;
+  margin: auto;
+  margin-top: 10px;
+  width: 80%;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.ctask-container {
+  margin: 10px 15px 20px 15px;
+  height: 85%;
+  overflow-y: auto;
+}
+
+/* ======================================================= */
+
+/* Dynamic code insertion */
+.listItem {
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+  width: 80%;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+.item-1 {
+  font-size: 1.1rem;
+  padding: 10px 4px 10px 10px;
+  width: 84%;
+  overflow-y: auto;
+}
+
+.item-2 {
+  top: 0;
+  bottom: 0;
+  width: 8%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #1faa59c2;
+  cursor: pointer;
+}
+
+.item-3 {
+  display: flex;
+  justify-content: center;
+  width: 8%;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #e21717c9;
+  cursor: pointer;
+}
+
+.item-2:hover,
+.item-3:hover {
+  opacity: 0.9;
+}
+
+/* css classes to be used by JS */
+.urgentStyle {
+  background-color: #ffc2be;
+}
+
+.dallyStyle {
+  background-color: #fcff66;
+}
+
+.remove {
+  transform: scale3D(2, 2, 2) translate(-500px);
+  opacity: 0;
+  transition: 1100ms ease-in-out;
+}
+
+.complete {
+  padding: 11px 4px 11px 10px;
+  background-color: #26c281;
+  transition: background-color 800ms ease-out;
+}
