@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap");
+
+/* CSS Reset */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+/* Navbar */
+#navbar {
+  width: 100%;
+  background: #4d2b64;
+}
+
+#brand {
+  color: aliceblue;
+  width: fit-content;
+  margin: auto;
+  padding: 5px;
+  font-size: 700;
+}
+
+/* Main body  */
+#mainContent {
+  background: linear-gradient(
+      rgba(255, 187, 0, 0.493),
+      rgba(60, 175, 241, 0.534)
+    ),
+    url("https://source.unsplash.com/user/erondu/1920x1080");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: calc(100vh - 96px);
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.play-box {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+#turn-box,
+#playerSettings-box,
+#overlay h2 {
+  padding: 10px;
+  width: 350px;
+}
+
+#turn-box h2,
+#playerSettings-box h2,
+#overlay h2 {
+  padding: 10px;
+}
+
+#reset,
+#playerSettings-box h2,
+#btn-text {
+  margin-top: 10px;
+  border-radius: 50px;
+  background-color: #fc9c2e;
+}
+
+#reset:hover,
+#player1:hover,
+#btn-text:hover,
+#player2:hover {
+  cursor: pointer;
+  background-color: royalblue;
+  color: aliceblue;
+  transition: 300ms;
+}
+
+#playBoard {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.BOX {
+  height: 150px;
+  width: 150px;
+  border: 1px solid black;
+  font-size: 90px;
+}
+
+#box1,
+#box4,
+#box7 {
+  border-left: 0px;
+}
+#box3,
+#box6,
+#box9 {
+  border-right: 0px;
+}
+#box1,
+#box2,
+#box3 {
+  border-top: 0px;
+}
+#box7,
+#box8,
+#box9 {
+  border-bottom: 0px;
+}
+
+/* Overlay */
+#overlay {
+  width: 450px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+/* Score board */
+.score-box {
+  background: linear-gradient(
+    rgba(104, 107, 106, 0.356),
+    rgba(241, 239, 239, 0.397)
+  );
+  width: 63%;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+#scoreTitle {
+  color: aliceblue;
+  width: 100%;
+  background-color: #4d2b64;
+}
+
+.playerCard {
+  width: 50%;
+  height: 120px;
+  padding: 20px;
+}
+
+.playerTitle,
+.playerScore {
+  padding: 5px;
+  font-size: 1.4em;
+}
+
+/* Footer */
+
+.footer {
+  background: #4d2b64;
+  width: 100%;
+}
+
+.footer h2 {
+  color: aliceblue;
+  width: fit-content;
+  margin: auto;
+  padding: 5px;
+}
+
+/* Media queries */
+
+@media (max-width: 1281px) {
+  .footer, #scoreTitle, #navbar {
+    background: tomato;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #turn-box, #playerSettings-box, #overlay h2 {
+    padding: 5px;
+    width: 200px;
+  }
+
+  #turn-box h2, #playerSettings-box h2, #overlay h2 {
+    padding: 5px;
+  }
+
+  #reset, #playerSettings-box h2, #btn-text {
+    margin-top: 5px;
+  }
+
+  #playBoard {
+    width: 300px;
+    height: 300px;
+  }
+
+  .BOX {
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+  }
+
+  /* Overlay */
+  #overlay {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Score board */
+  .score-box {
+    width: 75%;
+  }
+
+  .playerCard {
+    height: 80px;
+    padding: 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #turn-box, #playerSettings-box, #overlay h2 {
+    padding: 5px;
+    width: 200px;
+  }
+
+  #turn-box h2, #playerSettings-box h2, #overlay h2 {
+    padding: 5px;
+  }
+
+  #reset, #playerSettings-box h2, #btn-text {
+    margin-top: 5px;
+  }
+
+  #playBoard {
+    width: 300px;
+    height: 300px;
+  }
+
+  .BOX {
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+  }
+
+  #overlay {
+    width: 300px;
+    height: 300px;
+  }
+
+  .score-box {
+    width: 75%;
+  }
+
+  .playerCard {
+    height: 80px;
+    padding: 0px;
+  }
+}
+
+@media (max-width: 767px) {
+  #turn-box, #playerSettings-box, #overlay h2 {
+    padding: 5px;
+    width: 200px;
+  }
+
+  #turn-box h2, #playerSettings-box h2, #overlay h2 {
+    padding: 5px;
+  }
+
+  #reset, #playerSettings-box h2, #btn-text {
+    margin-top: 5px;
+  }
+
+  #playBoard {
+    width: 300px;
+    height: 300px;
+  }
+
+  .BOX {
+    height: 100px;
+    width: 100px;
+    font-size: 50px;
+  }
+
+  /* Overlay */
+  #overlay {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Score board */
+  .score-box {
+    width: 75%;
+  }
+
+  .playerCard {
+    height: 80px;
+    padding: 0px;
+  }
+}

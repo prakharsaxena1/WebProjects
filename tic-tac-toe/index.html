@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tic tac toe</title>
+  </head>
+  <body>
+    <!-- BRAND / Navbar -->
+    <header id="navbar">
+      <!-- Brand name -->
+      <h1 id="brand">TIC - TAC - TOE</h1>
+      <!-- Start/Stop Music -->
+    </header>
+    <!-- main body -->
+    <!-- Turn | Play Board | Overlay | Player symbols -->
+    <div id="mainContent">
+      <div class="play-box">
+        <!-- Turn box -->
+        <div id="turn-box">
+          <h2>Turn: Player <span id="turn">1</span></h2>
+          <h2 id="reset">Reset all</h2>
+        </div>
+        <!-- tic-tac-toe box -->
+        <div id="playBoard">
+          <span class="BOX" id="box1"></span>
+          <span class="BOX" id="box2"></span>
+          <span class="BOX" id="box3"></span>
+          <span class="BOX" id="box4"></span>
+          <span class="BOX" id="box5"></span>
+          <span class="BOX" id="box6"></span>
+          <span class="BOX" id="box7"></span>
+          <span class="BOX" id="box8"></span>
+          <span class="BOX" id="box9"></span>
+        </div>
+        <!-- Overlay -->
+        <div id="overlay">
+          <h2 id="win-text"></h2>
+          <h2 id="btn-text">New Game ?</h2>
+        </div>
+        <!-- Player choice for X O-->
+        <div id="playerSettings-box">
+          <h2 id="player1">Player 1 <span id="player1Symbol">X</span></h2>
+          <h2 id="player2">Player 2 <span id="player2Symbol">O</span></h2>
+        </div>
+      </div>
+      <!-- Scoreboard -->
+      <div class="score-box">
+        <h2 id="scoreTitle">Score board</h2>
+
+        <div class="playerCard">
+          <h3 class="playerTitle">Player 1</h3>
+          <span class="playerScore" id="player1Score">0</span>
+        </div>
+        <div class="playerCard">
+          <h3 class="playerTitle">Player 2</h3>
+          <span class="playerScore" id="player2Score">0</span>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <h2>𝔪𝔞𝔡𝔢 𝔟𝔶 𝖙𝖍𝖚𝖓𝖉𝖊𝖗</h2>
+    </footer>
+  </body>
+  <script src="script.js"></script>
+</html>
